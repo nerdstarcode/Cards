@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
 :root{
-    --bgPage: #17141d;
-    --bgScrow: #201c29;
+    --bgPage: #3f3a6f;
+    --bgScrow: #3F3A6F;
     --colorText: #fff;
     --FamilyFont: 'DM Mono', monospace;
+    --bgCard: #43395E;
 }
 *
 {
@@ -37,11 +38,11 @@ a
 {
     background: var(--bgScrow);
     border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+    box-shadow: inset 2px 2px 2px hsla(246,31%,33%,.25), inset -2px -2px 2px rgba(63,65,111,.25);
 }
 .card-list::-webkit-scrollbar-track 
 {
-    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+    background: linear-gradient(90deg,#3F3A6F,#3F3A6F 1px,#564f96 0,#564f96);
 }
 .card 
 {
@@ -50,8 +51,8 @@ a
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
-    background: #17141d;
-    box-shadow: -1rem 0 3rem #000;
+    background: var(--bgCard);
+    box-shadow: -1rem 0 3rem 0rem rgba(0, 0, 0,0.3);
     display: flex;
     flex-direction: column;
     transition: .2s;
