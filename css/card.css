@@ -2,7 +2,10 @@
 :root{
     --bgPage: #3f3a6f;
     --bgScrow: #3F3A6F;
-    --colorText: #fff;
+    --colorText: #E9EBE4;
+    --colorText2: #6D6E7B;
+    --colorTextGradient: linear-gradient(90deg, #ECB757, #4E008D);
+    --Color01: #ECB757;
     --FamilyFont: 'DM Mono', monospace;
     --bgCard: #443960;
     --bgCardOpacity: rgba(68, 57, 96, 0.8);
@@ -19,17 +22,12 @@ body
     color: var(--colorText);
     font-family: var(--FamilyFont);
 }
-a 
-{
-    text-decoration: none;
-}
 .card-list 
 {
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
 }
-
 .card-list::-webkit-scrollbar 
 {
     width: 10px;
@@ -87,4 +85,58 @@ a
 .card:not(:first-child)
 {
     margin-left: -130px;
+}
+.card-author
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+.author-avatar img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    margin: 16px 10px;
+    display: block;
+    overflow: hidden;
+}
+.card:hover .author-avatar img
+{
+    transition: 0.5s;
+    filter: grayscale(0%);
+}
+.half-circle
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke: var(--Color01);
+}
+.author-name-prefix
+{
+    font-style: normal;
+    font-weight: 700;
+    color: var(--colorText2);
+}
+.card-header h2:hover
+{
+    background: var(--colorTextGradient);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tags a 
+{
+    color: var(--colorText);
+    text-decoration: none;
 }
